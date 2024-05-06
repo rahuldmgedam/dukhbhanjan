@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Carme&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+body {
+  font-family: "Nunito", sans-serif;
+}
+.css-1mr4ysp {
+  background-color: #f7fafc !important;
+  padding-bottom: 5px;
+}
+.css-4qi979 {
+  background-color: transparent !important;
+}
+.css-1qnaf5v {
+  text-align: center;
+}
+.css-gmuwbf {
+  text-align: center !important;
+}
+.css-1ckhs4b {
+  width: auto;
+ 
+}
+
+@media only screen and (max-width: 767px) {
+  .css-cdhdpa {
+    font-size: 20px !important;
+    position: relative;
+    right: 2rem;
+  }
+.css-14zggts{
+  position: relative !important;
+  right: 1rem !important;
+}
+  .css-1id8hns {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    position: relative !important;
+    left: 2rem !important;
+  }
+  .css-1ujdirh {
+    position: relative !important;
+    right: 5px !important;
+    font-size: 12px !important;
+  }
+  .css-18mdml0 {
+    font-size: 12px !important;
+  }
+  .css-drbcjm {
+    font-size: 15px !important;
+  }
+  .css-vtnsu5 {
+    position: relative !important;
+    right: 0rem !important;
+  }
+  .css-1o4gcv6 {
+    text-align: center !important;
+  }
+  .css-qqfgvy {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .css-1bma46p {
+    margin-left: 2.5rem !important;
+  }
+  .css-yqm9dt {
+    height: 50px;
+    width: 50px;
+  }
+  .css-v7v99c {
+    position: relative;
+    right: 1rem;
+  }
+  .css-1qvd6bf {
+    text-align: center;
+  }
+  .css-j84kd3 {
+    text-align: center;
+  }
+  .css-1bh8chh {
+    position: relative !important;
+    right: 10rem !important;
+  }
+  .css-winnkj {
+    text-align: center !important;
+  }
+  .sbtn {
+    position: relative !important;
+    left: 10px !important;
+    bottom: 10px !important;
+  }
+  .css-1bh8chh {
+    margin-left: 1rem !important;
+  }
+}

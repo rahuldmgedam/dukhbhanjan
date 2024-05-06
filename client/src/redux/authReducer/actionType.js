@@ -1,0 +1,7 @@
+export const LOGIN_REQUEST = "LOGIN_REQUEST";
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGIN_ERROR = "LOGIN_ERROR";
+
+export const POST_USER_REQUEST = "POST_USER_REQUEST";
+export const POST_USER_SUCCESS = "POST_USER_SUCCESS";
+export const POST_USER_ERROR = "POST_USER_ERROR";

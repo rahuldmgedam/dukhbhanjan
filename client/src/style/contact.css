@@ -1,0 +1,38 @@
+.wrapper{
+    display: flex;
+  }
+  .arrow{
+      rotate: 90deg;
+      padding: 10px;
+      animation: bounce 0.6s;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+      font-size: larger;
+      margin-left: 20px;
+  }
+  .arrow-head{
+      width: 0;
+      height: 0;
+      border-left: 4px solid transparent;
+      border-right:  4px solid transparent;
+      border-bottom: 4px solid black;
+  
+  }
+  .down-arrow-head{
+      width: 0;
+      height: 0;
+      border-left: 4px solid transparent;
+      border-right:  4px solid transparent;
+      border-top: 4px solid black;
+  }
+  .arrow-body{
+      height: 10px;
+      width: 2px;
+      background-color: rgb(0, 0, 0);
+      margin-left: 3px
+  }
+  
+  @keyframes bounce {
+    from { transform: translate3d(0, 0, 0);     }
+    to   { transform: translate3d(0, 10px, 0); }
+  }

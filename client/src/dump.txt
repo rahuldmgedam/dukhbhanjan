@@ -1,0 +1,257 @@
+ // const handleCheckout = async () => {
+  //   try {
+  //     // Step 1: Initiate payment
+  //     const initiateResponse = await axios.post(
+  //       "https://vivacious-gilet-duck.cyclic.app///api/payment/orders",
+  //       { price: calculateTotal() * 100 }
+  //     );
+
+  //     const order = initiateResponse.data.data;
+
+  //     // Step 2: Handle payment through Razorpay
+  //     const rzp = new window.Razorpay({
+  //       key: "rzp_test_fUOPRWKT3a1PWY",
+  //       price: order.price,
+  //       currency: "INR",
+  //       name: "Dukha Bhanjan",
+  //       description: "Payment for your order",
+  //       order_id: order.id,
+  //       handler: async (response) => {
+  //         // Step 3: Verify payment on the server
+  //         const verifyResponse = await axios.post(
+  //           "https://localhost:4000/api/payment/verify",
+  //           {
+  //             razorpay_order_id: response.razorpay_order_id,
+  //             razorpay_payment_id: response.razorpay_payment_id,
+  //             razorpay_signature: response.razorpay_signature,
+  //           }
+  //         );
+
+  //         if (verifyResponse.data.message === "Payment verified successfully") {
+  //           // Payment successful
+  //           toast({
+  //             title: "Checkout Successful",
+  //             status: "success",
+  //             duration: 3000,
+  //             isClosable: true,
+  //           });
+
+  //           // Clear the cart or perform other actions as needed
+  //         } else {
+  //           // Payment verification failed
+  //           toast({
+  //             title: "Payment Verification Failed",
+  //             status: "error",
+  //             duration: 5000,
+  //             isClosable: true,
+  //           });
+  //         }
+  //       },
+  //       prefill: {
+  //         name: "Customer Name",
+  //         email: "customer@example.com",
+  //         contact: "9876543210",
+  //       },
+  //       theme: {
+  //         color: "#F37254",
+  //       },
+  //     });
+
+  //     rzp.open();
+  //   } catch (error) {
+  //     console.error(error);
+  //     toast({
+  //       title: "Error during checkout",
+  //       status: "error",
+  //       duration: 5000,
+  //       isClosable: true,
+  //     });
+  //   }
+  // };
+
+  // const checkoutHandler = async (price) => {
+  //   const {
+  //     data: { key },
+  //   } = await axios.get("http://www.localhost:4000/api/getkey");
+
+  //   const {
+  //     data: { order },
+  //   } = await axios.post("https://vivacious-gilet-duck.cyclic.app///api/checkout", {
+  //     price,
+  //   });
+
+  //   const options = {
+  //     key,
+  //     price: order.price,
+  //     currency: "INR",
+  //     name: "Dukha Bhanjan",
+  //     description: "Tutorial of RazorPay",
+  //     image: "https://avatars.githubusercontent.com/u/25058652?v=4",
+  //     order_id: order.id,
+  //     callback_url: "https://vivacious-gilet-duck.cyclic.app///api/paymentverification",
+  //     prefill: {
+  //       name: "Gaurav Kumar",
+  //       email: "gaurav.kumar@example.com",
+  //       contact: "9999999999",
+  //     },
+  //     notes: {
+  //       address: "Razorpay Corporate Office",
+  //     },
+  //     theme: {
+  //       color: "#121212",
+  //     },
+  //   };
+  //   const razor = new window.Razorpay(options);
+  //   razor.open();
+  // };
+  // const handleSubmit = () => {
+  //   const data = {
+  //     firstName,
+  //     lastName,
+  //     email,
+  //     password: pass,
+  //   };
+  //   axios
+  //     .post("http://localhost/dukhdb/index.php", data)
+  //     .then((res) => {
+  //       setFirstname("");
+  //       setLastname("");
+  //       setemail("");
+  //       setPass("");
+  //       toast({
+  //         title: "Account Created",
+  //         status: "success",
+  //         duration: 3000,
+  //         isClosable: true,
+  //         position: "top",
+  //       });
+
+  //       // Set the user information in the state
+  //       setUser(data);
+  //       navigate("/");
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
+  // const handleSubmit = () => {
+  //   const data = {
+  //     firstName,
+  //     lastName,
+  //     email,
+  //     password: pass,
+  //   };
+  //   axios
+  //     .post("http://localhost/dukhdb/index.php", data)
+  //     .then((res) => {
+  //       // Check if the response has data and other relevant information
+  //       if (res.data) {
+  //         setFirstname("");
+  //         setLastname("");
+  //         setemail("");
+  //         setPass("");
+  //         toast({
+  //           title: "Account Created",
+  //           status: "success",
+  //           duration: 3000,
+  //           isClosable: true,
+  //           position: "top",
+  //         });
+
+  //         // Set the user information in the state
+  //         setUser(data);
+  //         navigate("/");
+  //       } else {
+  //         // Handle the case when the response does not contain the expected data
+  //         console.error("Unexpected response format:", res);
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
+  const handleSubmit = () => {
+    const data = {
+      FirstName: firstName,
+      lastName,
+      email,
+      password: pass,
+    };
+    axios
+      .post("http://localhost/dukhdb/index.php", data)
+      .then((res) => {
+        // Check if the response has data and other relevant information
+        if (res.data !== undefined && res.data !== null) {
+          setFirstname("");
+          setLastname("");
+          setemail("");
+          setPass("");
+          toast({
+            title: "Account Created",
+            status: "success",
+            duration: 3000,
+            isClosable: true,
+            position: "top",
+          });
+
+          // Set the user information in the state
+          console.log("Setting user:", data);
+          setUser(data);
+          navigate("/");
+        } else {
+          // Handle the case when the response does not contain the expected data
+          console.error("Unexpected response format:", res);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+    const loadClientData = async () => {
+    try {
+      const response = await axios.get("http://localhost/dukhdb/getData.php");
+      const data = response.data.phpresult;
+      setClientData(data);
+    } catch (error) {
+      console.error("Error loading data:", error);
+    }
+  };
+
+  useEffect(() => {
+    loadClientData();
+  }, []);
+
+  const toast = useToast();
+
+  function loginSubmit() {
+    const matchingUser = clientData.find(
+      (user) => user.Email === mail && user.Password === password
+    );
+
+    if (matchingUser) {
+      toast({
+        title: "Login Successfully",
+        status: "success",
+        duration: 3000,
+        isClosable: true,
+        position: "top",
+      });
+
+      // Set the user information in the state
+      setUser(matchingUser);
+      setMail("");
+      setPassword("");
+      navigate("/");
+    } else {
+      toast({
+        title: "Login Failed",
+        description: "Invalid email or password",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+        position: "top",
+      });
+      setMail("");
+      setPassword("");
+    }
+  }

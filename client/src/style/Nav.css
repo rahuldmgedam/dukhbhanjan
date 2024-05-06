@@ -1,0 +1,95 @@
+
+.nav-link {
+  font-weight: 600;
+  color: gray.900;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+.VIpgJd-ZVi9od-aZ2wEe{
+  visibility: hidden;
+} 
+ .VIpgJd-ZVi9od-aZ2wEe-OiiCO{
+  visibility: hidden;
+}
+.blink {
+   font-size: 20px;
+  font-weight: 600;
+  color: black;
+  font-family: sans-serif;
+  background-color: #f7e930f1;
+  text-align: center;
+}
+
+
+
+
+.goog-te-combo{
+  border: 1px solid gray;
+  margin-left: 10px;
+}
+/* .VIpgJd-ZVi9od-l4eHX-hSRGPd{
+  visibility: hidden;
+} */
+.skiptranslate {
+  padding: 5px;
+ margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.skiptranslate img{
+  text-align: center;
+  
+width: 30%;
+text-align: center;
+
+}
+
+/* .skiptranslate{
+  display: none;
+} */
+
+
+/* Add hover effect */
+.nav-link:hover {
+  color: #fff44f; /* Change the color on hover */
+}
+
+
+
+/* nav log css rortae start */
+.container{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #D8D8D8;
+    padding: 6px;
+}
+
+/* Define a CSS animation named "rotate" */
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Apply the "rotate" animation to the image */
+  .rotate-image {
+    /* Set the width and height of the image */
+    width: 100px;
+    height: 100px;
+  
+    /* Apply the animation */
+    animation: rotate 25s linear infinite; /* Rotate for 5 seconds, linear timing, infinite repetitions */
+  }
+  
+  /* nav log css rortae end */
+  
+  
